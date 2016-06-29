@@ -1,0 +1,7 @@
+[{
+  "caption": "zce",
+  "children": [{
+    "caption": "Open in Browser",
+    "command": "open_in_browser"
+  }]
+}]

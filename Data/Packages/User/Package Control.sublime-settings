@@ -7,6 +7,15 @@
 	[
 		"AdvancedNewFile",
 		"All Autocomplete",
-		"Emmet"
+		"AutoFileName",
+		"Babel",
+		"ConvertToUTF8",
+		"DocBlockr",
+		"EditorConfig",
+		"Emmet",
+		"Git",
+		"GitGutter",
+		"IMESupport",
+		"JavaScript Snippets"
 	]
 }
