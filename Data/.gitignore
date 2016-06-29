@@ -1,0 +1,8 @@
+.DS_Store
+Cache/
+Index/
+Local/
+Package Control.cache/
+Backup/
+Packages/User/encoding_cache.json
+Packages/User/Package Control.last-run
