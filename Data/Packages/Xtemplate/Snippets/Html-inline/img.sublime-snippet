@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[<img src="http://img.f2e.taobao.net/img.png?x=${1:300}x${2:300}" width="${1:300}" height="${2:300}" $3/>$0
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>img</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.xtpl, source.js</scope>
+	<description><![CDATA[<img/>]]></description>
+</snippet>

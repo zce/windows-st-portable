@@ -1,0 +1,532 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+fileTypes:
+- xtpl
+- tpl
+- html
+- htm
+name: Xtemplate
+scopeName: source.xtpl
+uuid: d9776d5a-afa4-4016-8c8e-ffbe386edb58
+# http://manual.macromates.com/en/language_grammars
+patterns:
+- include: '#embedded-code'
+- include: '#entities'
+- include: '#html'
+- include: '#xtemplate'
+
+repository:
+  html:
+    patterns:
+    - include: '#html-children'
+    - include: '#html-preprocessor'
+    - include: '#html-comment'
+    - include: '#html-sgml'
+    - include: '#html-style'
+    - include: '#html-js'
+    - include: '#html-tags'
+  html-children:
+    patterns:
+    - begin: (<)([a-zA-Z0-9:]++)(?=[^>]*></\2>)
+      beginCaptures:
+        '1': {name: punctuation.definition.tag.begin.html}
+        '2': {name: entity.name.tag.html}
+      end: (>)(<)(/)(\2)(>)
+      endCaptures:
+        '1': {name: punctuation.definition.tag.end.html}
+        '2': {name: punctuation.definition.tag.begin.html meta.scope.between-tag-pair.html}
+        '3': {name: punctuation.definition.tag.begin.html}
+        '4': {name: entity.name.tag.html}
+        '5': {name: punctuation.definition.tag.end.html}
+      name: meta.tag.any.html
+      patterns:
+      - {include: '#tag-stuff'}
+  html-preprocessor:
+    patterns:
+    - begin: (<\?)(xml)
+      captures:
+        '1': {name: punctuation.definition.tag.html}
+        '2': {name: entity.name.tag.xml.html}
+      end: (\?>)
+      name: meta.tag.preprocessor.xml.html
+      patterns:
+      - {include: '#tag-generic-attribute'}
+      - {include: '#string-double-quoted'}
+      - {include: '#string-single-quoted'}
+  html-comment:
+    patterns:
+    - begin: <!--
+      captures:
+        '0': {name: punctuation.definition.comment.html}
+      end: --\s*>
+      name: comment.block.html
+      patterns:
+      - {match: --, name: invalid.illegal.bad-comment-or-CDATA.html}
+      - {include: '#embedded-code'}
+  html-sgml:
+    patterns:
+    - begin: <!
+      captures:
+        '0': {name: punctuation.definition.tag.html}
+      end: '>'
+      name: meta.tag.sgml.html
+      patterns:
+      - begin: (?i:DOCTYPE)
+        captures:
+          '1': {name: entity.name.tag.doctype.html}
+        end: (?=>)
+        name: meta.tag.sgml.doctype.html
+        patterns:
+        - {match: '"[^">]*"', name: string.quoted.double.doctype.identifiers-and-DTDs.html}
+      - {begin: '\[CDATA\[', end: ']](?=>)', name: constant.other.inline-data.html}
+      - {match: '(\s*)(?!--|>)\S(\s*)', name: invalid.illegal.bad-comment-or-CDATA.html}
+  html-style:
+    patterns:
+    - begin: (?:^\s+)?(<)((?i:style))\b(?![^>]*/>)
+      beginCaptures:
+        '1': {name: punctuation.definition.tag.begin.html}
+        '2': {name: entity.name.tag.style.html}
+      end: (?<=</(?:[sS][tT][yY][lL][eE]))(>)(?:\s*\n)?
+      endCaptures:
+        '2': {name: punctuation.definition.tag.html}
+      name: meta.tag.style.html
+      patterns:
+      - {include: '#tag-stuff'}
+      - begin: (?<!</(?:[sS][tT][yY][lL][eE]))(>)
+        captures:
+          '1': {name: punctuation.definition.tag.begin.html}
+          '2': {name: entity.name.tag.style.html}
+        contentName: source.css.embedded.html
+        end: (</)((?i:style))
+        patterns:
+        - begin: /\*
+          captures:
+            '0': {name: punctuation.definition.comment.css}
+          end: \*/|(?=</[sS][tT][yY][lL][eE])
+          name: comment.block.css
+        - {include: source.css}
+  html-js:
+    patterns:
+    - begin: "(?:^\\s+)?(<)((?i:script))\\b(?![^>]*/>)(?!.*type=[\"']text/(?:temp\u200C\
+    \u200Blate|html)['\"])"
+      beginCaptures:
+        '1': {name: punctuation.definition.tag.begin.html}
+        '2': {name: entity.name.tag.script.html}
+      end: (?<=</([sS][cC][rR][iI][pP][tT]))(>)(?:\s*\n)?
+      endCaptures:
+        '2': {name: punctuation.definition.tag.html}
+      name: meta.tag.script.html
+      patterns:
+      - {include: '#tag-stuff'}
+      - begin: (?<!</(?:[sS][cC][rR][iI][pP][tT]))(>)
+        captures:
+          '1': {name: punctuation.definition.tag.end.html}
+          '2': {name: entity.name.tag.script.html}
+        contentName: source.js.embedded.html
+        end: (</)((?i:script))
+        patterns:
+        - captures:
+            '1': {name: punctuation.definition.comment.js}
+          match: (//).*?((?=</[sS][cC][rR][iI][pP][tT])|$\n?)
+          name: comment.line.double-slash.js
+        - begin: /\*
+          captures:
+            '0': {name: punctuation.definition.comment.js}
+          end: \*/|(?=</[sS][cC][rR][iI][pP][tT])
+          name: comment.block.js
+        - {include: '#php'}
+        - {include: source.js}
+  html-tags:
+    comment: 'HTML'
+    patterns:
+    - begin: (</?)((?i:body|head|html)\b)
+      captures:
+        '1': {name: punctuation.definition.tag.begin.html}
+        '2': {name: entity.name.tag.structure.any.html}
+      end: (>)
+      endCaptures:
+        '1': {name: punctuation.definition.tag.end.html}
+      name: meta.tag.structure.any.html
+      patterns:
+      - {include: '#tag-stuff'}
+    - begin: (</?)((?i:address|blockquote|dd|div|dl|dt|fieldset|form|frame|frameset|h1|h2|h3|h4|h5|h6|iframe|noframes|object|ol|p|ul|applet|center|dir|hr|menu|pre)\b)
+      beginCaptures:
+        '1': {name: punctuation.definition.tag.begin.html}
+        '2': {name: entity.name.tag.block.any.html}
+      end: (>)
+      endCaptures:
+        '1': {name: punctuation.definition.tag.end.html}
+      name: meta.tag.block.any.html
+      patterns:
+      - {include: '#tag-stuff'}
+    - begin: (</?)((?i:a|abbr|acronym|area|b|base|basefont|bdo|big|br|button|caption|cite|code|col|colgroup|del|dfn|em|font|head|html|i|img|input|ins|isindex|kbd|label|legend|li|link|map|meta|noscript|optgroup|option|param|q|s|samp|script|select|small|span|strike|strong|style|sub|sup|table|tbody|td|textarea|tfoot|th|thead|title|tr|tt|u|var)\b)
+      beginCaptures:
+        '1': {name: punctuation.definition.tag.begin.html}
+        '2': {name: entity.name.tag.inline.any.html}
+      end: '((?: ?/)?>)'
+      endCaptures:
+        '1': {name: punctuation.definition.tag.end.html}
+      name: meta.tag.inline.any.html
+      patterns:
+      - {include: '#tag-stuff'}
+    - begin: (</?)([a-zA-Z0-9:]+)
+      beginCaptures:
+        '1': {name: punctuation.definition.tag.begin.html}
+        '2': {name: entity.name.tag.other.html}
+      end: (>)
+      endCaptures:
+        '1': {name: punctuation.definition.tag.end.html}
+      name: meta.tag.other.html
+      patterns:
+      - {include: '#tag-stuff'}
+    - {match: <>, name: invalid.illegal.incomplete.html}
+    - {match: <, name: invalid.illegal.bad-angle-bracket.html}
+  # 继承默认 HTML
+  xtemplate:
+    patterns:
+    - include: '#xtpl-comments'
+    - include: '#xtpl-literal-method'
+    - include: '#xtpl-literal-parameters'
+
+  xtpl-literal-method:
+    patterns:
+    - name: meta.function.block.start.xtpl
+      comment: '带 # / 的表达式'
+      begin: (\{\{)\s*(\~?)\s*((?:#|\/)\s*(?:if|each|with|macro|block))
+      beginCaptures:
+        '1':
+          name: support.constant.xtpl
+        '2':
+          name: keyword.operator.accessor.xtpl
+        '3':
+          name: support.function.xtpl
+      end: (\~?)(~?}})
+      endCaptures:
+        '1':
+          name: keyword.operator.accessor.xtpl
+        '2':
+          name: support.constant.xtpl
+      patterns:
+      - include: '#xtpl-function-variable'
+      - include: '#string-single-quoted'
+      - include: '#string-double-quoted'
+
+    - name: meta.function.inline.other.xtpl
+      comment: '条件语句 不包含注释'
+      begin: (\{\{~?\{*(?!\!))\s*(\b(?:else|elseif|include|extend|block|tms|set|vmcommon)\b)
+      beginCaptures:
+        '1':
+          name: support.constant.xtpl
+        '2':
+          name: support.function.xtpl
+      end: (~?\}\}\}*)
+      endCaptures:
+        '1':
+          name: support.constant.xtpl
+      patterns:
+      - include: '#xtpl-function-variable'
+      - include: '#string-single-quoted'
+      - include: '#string-double-quoted'
+
+    - name: meta.function.inline.other.xtpl
+      begin: (\{\{\%)
+      beginCaptures:
+        '1':
+          name: support.constant.xtpl
+      end: (~?%}})
+      endCaptures:
+        '1':
+          name: support.constant.xtpl
+      patterns:
+      - include: '#xtpl-literal-method'
+
+  xtpl-literal-punctuation:
+    comment: '标点符号'
+    patterns:
+    - name: keyword.operator.accessor.xtpl
+      match: \.
+    - name: meta.brace.square.xtpl
+      match: \[|\]
+    - name: keyword.operator.accessor.xtpl
+      match: \~
+
+  xtpl-literal-parameters:
+    comment: '输出字段 变量'
+    patterns:
+    - begin: \{\{\{?
+      beginCaptures:
+        '0':
+          name: support.constant.xtpl
+      end: \}?\}\}
+      endCaptures:
+        '0':
+          name: support.constant.xtpl
+      patterns:
+      - include: '#xtpl-function-variable'
+      - include: '#string-single-quoted'
+      - include: '#string-double-quoted'
+
+  xtpl-function-variable:
+    comment: '条件语句'
+    patterns:
+    - include: '#xtpl-literal-language-constant'
+    - include: '#xtpl-literal-operators'
+    - include: '#xtpl-literal-number'
+    - include: '#xtpl-literal-regexp'
+    - include: '#xtpl-literal-methods'
+    - include: '#xtpl-literal-punctuation'
+    # 都排除之后 剩下的就是 变量了~~~~
+    - include: '#xtpl-literal-variable'
+
+  # xtemplate 模板括号内
+  xtpl-literal-operators:
+    patterns:
+    - name: keyword.operator.js
+      match: '[-\+\*\%\/&\<\>\=\!]+'
+
+  xtpl-literal-variable:
+    patterns:
+    - name: variable.parameter.function.xtpl
+      match: '[_$a-zA-Z][$\w]*'
+
+  xtpl-literal-number:
+    patterns:
+    - name: invalid.illegal.numeric.hex.xtpl
+      match: (?i)(?:\B[-+]|\b)0x[0-9a-f]*\.(\B|\b[0-9]+)
+
+    - name: invalid.illegal.numeric.octal.xtpl
+      match: (?:\B[-+]|\b)0[0-9]+\.(\B|\b[0-9]+)
+
+    - name: constant.numeric.xtpl
+      match: >-
+        (?xi)
+          (?:\B[-+])?
+          (?:
+            \b0b[0-1]*|                 # binary
+            \b0o[0-7]*|                 # octal
+            \b0x[0-9a-f]*|              # hex
+            (
+              \B\.[0-9]+|               # e.g. .999
+              \b[0-9]+(\.[0-9]*)?       # e.g. 999.999, 999. or 999
+            )(e[-+]?[0-9]+)?            # e.g. e+123, E-123
+          )
+
+    - name: constant.language.infinity.xtpl
+      match: (?:\B[-+]|\b)(Infinity)\b
+
+  xtpl-literal-language-constant:
+    patterns:
+    - name: constant.language.boolean.true.xtpl
+      match: (?<!\.)\btrue\b
+
+    - name: constant.language.boolean.false.xtpl
+      match: (?<!\.)\bfalse\b
+
+    - name: constant.language.null.xtpl
+      match: (?<!\.)\bnull\b
+
+    - name: constant.language.undefined.xtpl
+      match: (?<!\.)\bundefined\b
+
+    - name: constant.language.nan.xtpl
+      match: (?<!\.)\bNaN\b
+
+  xtpl-literal-regexp:
+    patterns:
+    # ignore ++, -- since they're uncommon, distinguishing them is not possible in sublime text, see:
+    #   http://stackoverflow.com/questions/5519596/when-parsing-javascript-what-determines-the-meaning-of-a-slash
+    - name: string.regexp.xtpl
+      begin: >-
+        (?x)
+          (?<=
+            \.|\(|,|{|}|\[|;|,|<|>|<=|>=|==|!=|===|!==|\+|-|\*|%|\+\+|--|<<|>>|>>>|&|\||\^|!|~|&&|\|\||\?|:|=|\+=|-=|\*=|%=|<<=|>>=|>>>=|&=|\|=|\^=|/|/=|
+            \Wnew|\Wdelete|\Wvoid|\Wtypeof|\Winstanceof|\Win|\Wdo|\Wreturn|\Wcase|\Wthrow|
+            ^new|^delete|^void|^typeof|^instanceof|^in|^do|^return|^case|^throw|^
+          )\s*
+          (/)
+          (?!/|\*|$)
+      beginCaptures:
+        '1': {name: punctuation.definition.string.begin.xtpl}
+      end: (/)([gimy]*)
+      endCaptures:
+        '1': {name: punctuation.definition.string.end.xtpl}
+        '2': {name: keyword.other.xtpl}
+      patterns:
+      - include: source.regexp.xtpl
+
+  xtpl-literal-methods:
+    patterns:
+    - name: entity.name.function.xtpl
+      comment: '匹配表达式内的方法 如: regex.test()'
+      match: (?<=(\w\.))\b[\w]+\b\s*(?=\()
+    - name: entity.name.function.xtpl
+      comment: '匹配表达式内的方法 如: test()'
+      match: (?<!\.)\s*\b[\w]+\b\s*(?=\()
+
+  xtpl-comments:
+    patterns:
+    # - name: comment.line.double-slash.xtpl
+    #   comment: '单行注释'
+    #   match: (\{\{!)([^\{\}]+)(\}\})
+    - name: comment.block.documentation.xtpl
+      begin: \{\{\!(?!\-)
+      captures:
+        '0':
+          name: punctuation.definition.comment.html
+      end: (?<!\-)(?<=\}\}$)
+      captures:
+        '0':
+          name: punctuation.definition.comment.html
+        '1':
+          name: punctuation.definition.comment.html
+      patterns:
+      - match: '@\w*'
+        name: string.other.comment.xtpl
+    - name: comment.block.documentation.xtpl
+      begin: \{\{\!\-\-(?!\{)
+      captures:
+        '0':
+          name: punctuation.definition.comment.html
+      end: (?<!\!)\-\-\!\}\}
+      captures:
+        '0':
+          name: punctuation.definition.comment.html
+      patterns:
+      - match: '@\w*'
+        name: string.other.comment.xtpl
+    - begin: ^([ \t]+)?\/\/
+      captures:
+        '0':
+          name: punctuation.definition.comment.html
+      end: ([\t\n])\s*
+      name: comment.block.xtpl
+
+  embedded-code:
+    patterns:
+    - {include: '#ruby'}
+    - {include: '#php'}
+    - {include: '#python'}
+  entities:
+    patterns:
+    - captures:
+        '1': {name: punctuation.definition.entity.html}
+        '3': {name: punctuation.definition.entity.html}
+      match: (&)([a-zA-Z0-9]+|#[0-9]+|#x[0-9a-fA-F]+)(;)
+      name: constant.character.entity.html
+    - {match: '&', name: invalid.illegal.bad-ampersand.html}
+  php:
+    begin: (?=(^\s*)?<\?)
+    end: (?!(^\s*)?<\?)
+    patterns:
+    - {include: source.php}
+  python:
+    begin: (?:^\s*)<\?python(?!.*\?>)
+    contentName: source.python.embedded.html
+    end: \?>(?:\s*$\n)?
+    patterns:
+    - {include: source.python}
+  ruby:
+    patterns:
+    - begin: <%+#
+      captures:
+        '0': {name: punctuation.definition.comment.erb}
+      end: '%>'
+      name: comment.block.erb
+    - begin: <%+(?!>)=?
+      captures:
+        '0': {name: punctuation.section.embedded.ruby}
+      contentName: source.ruby.embedded.html
+      end: -?%>
+      patterns:
+      - captures:
+          '1': {name: punctuation.definition.comment.ruby}
+        match: (#).*?(?=-?%>)
+        name: comment.line.number-sign.ruby
+      - {include: source.ruby}
+    - begin: <\?r(?!>)=?
+      captures:
+        '0': {name: punctuation.section.embedded.ruby.nitro}
+      contentName: source.ruby.nitro.embedded.html
+      end: -?\?>
+      patterns:
+      - captures:
+          '1': {name: punctuation.definition.comment.ruby.nitro}
+        match: (#).*?(?=-?\?>)
+        name: comment.line.number-sign.ruby.nitro
+      - {include: source.ruby}
+  string-double-quoted:
+    begin: '"'
+    beginCaptures:
+      '0': {name: punctuation.definition.string.begin.html}
+    end: '"'
+    endCaptures:
+      '0': {name: punctuation.definition.string.end.html}
+    name: string.quoted.double.html
+    patterns:
+    - include: '#embedded-code'
+    - include: '#entities'
+    - include: '#xtemplate'
+  string-single-quoted:
+    begin: ''''
+    beginCaptures:
+      '0': {name: punctuation.definition.string.begin.html}
+    end: ''''
+    endCaptures:
+      '0': {name: punctuation.definition.string.end.html}
+    name: string.quoted.single.html
+    patterns:
+    - include: '#embedded-code'
+    - include: '#entities'
+    - include: '#xtemplate'
+  tag-generic-attribute:
+    name: entity.other.attribute-name.html
+    match: '\b([a-zA-Z\-:]+)'
+  tag-id-attribute:
+    begin: \b(id)\b\s*(=)
+    captures:
+      '1': {name: entity.other.attribute-name.id.html}
+      '2': {name: punctuation.separator.key-value.html}
+    end: (?<='|")
+    name: meta.attribute-with-value.id.html
+    patterns:
+    - begin: '"'
+      beginCaptures:
+        '0': {name: punctuation.definition.string.begin.html}
+      contentName: meta.toc-list.id.html
+      end: '"'
+      endCaptures:
+        '0': {name: punctuation.definition.string.end.html}
+      name: string.quoted.double.html
+      patterns:
+      - include: '#embedded-code'
+      - include: '#entities'
+      - include: '#xtemplate'
+    - begin: ''''
+      beginCaptures:
+        '0': {name: punctuation.definition.string.begin.html}
+      contentName: meta.toc-list.id.html
+      end: ''''
+      endCaptures:
+        '0': {name: punctuation.definition.string.end.html}
+      name: string.quoted.single.html
+      patterns:
+      - {include: '#embedded-code'}
+      - {include: '#entities'}
+  tag-stuff:
+    patterns:
+    - {include: '#xtemplate'}
+    - {include: '#tag-id-attribute'}
+    - {include: '#tag-generic-attribute'}
+    - {include: '#string-double-quoted'}
+    - {include: '#string-single-quoted'}
+    - {include: '#embedded-code'}
+
+firstLineMatch: <!DOCTYPE|doctype|<(?i:html)|<\?(?i:php)
+foldingStartMarker: "(?x)\n\t\t(<(?i:a|article|aside|audio|blockquote|body|canvas|datalist|details|div|dl|fieldset|figcaption|figure|footer|form|head|header|hgroup|li|mark|meter|nav|ol|output|p|progress|rp|rt|ruby|script|section|select|small|style|summary|table|tbody|tfoot|thead|time|tr|ul|video)\\\
+  b.*?>\n\t\t|<!--(?!.*--\\s*>)\n\t\t|^<!--\\ \\#tminclude\\ (?>.*?-->)$\n\t\t|<\\\
+  ?(?:php)?.*\\b(if|for(each)?|while)\\b.+:\n\t\t|\\{\\{?(if|foreach|capture|literal|foreach|php|section|strip)\n\
+  \t\t|\\{\\s*($|\\?>\\s*$|//|/\\*(.*\\*/\\s*$|(?!.*?\\*/)))\n\t\t)"
+foldingStopMarker: "(?x)\n\t\t(</(?i:a|article|aside|audio|blockquote|body|canvas|datalist|details|div|dl|fieldset|figcaption|figure|footer|form|head|header|hgroup|li|mark|meter|nav|ol|output|p|progress|rp|rt|ruby|script|section|select|small|style|summary|table|tbody|tfoot|thead|time|tr|ul|video)>\n\
+  \t\t|^(?!.*?<!--).*?--\\s*>\n\t\t|^<!--\\ end\\ tminclude\\ -->$\n\t\t|<\\?(?:php)?.*\\\
+  bend(if|for(each)?|while)\\b\n\t\t|\\{\\{?/(if|foreach|capture|literal|foreach|php|section|strip)\n\
+  \t\t|^[^{]*\\}\n\t\t)"
+keyEquivalent: ^~H

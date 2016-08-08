@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[<video src="$1"${2:${3: autobuffer}${4: autoloop}${5: loop}${6: controls}${7: poster="${8:/images/video.png}"}}></video>$0]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>video</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.xtpl, source.js</scope>
+	<description><![CDATA[<video/>]]></description>
+</snippet>

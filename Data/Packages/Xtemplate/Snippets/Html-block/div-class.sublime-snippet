@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+<div class="${1:name}">
+	$0
+</div>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>dc</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.xtpl, source.js</scope>
+	<description><![CDATA[<div class/>]]></description>
+</snippet>

@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[<command ${1}>$0
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>command</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.xtpl, source.js</scope>
+	<description><![CDATA[<command/>]]></description>
+</snippet>

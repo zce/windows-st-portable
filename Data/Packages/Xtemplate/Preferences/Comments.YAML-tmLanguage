@@ -1,0 +1,14 @@
+# [PackageDev] target_format: plist, ext: tmPreferences
+name: Comments
+uuid: 4434fb82-1104-45d5-a79d-8f1ad636437c
+scope: source.xtpl
+settings:
+  shellVariables:
+  - name: TM_COMMENT_START
+    value: '{{!-- '
+  - name: TM_COMMENT_END
+    value: ' --!}}'
+  - name: TM_COMMENT_START_2
+    value: '{{!'
+  - name: TM_COMMENT_END_2
+    value: '}}'

@@ -37,7 +37,7 @@
 		"*.jar",
 		"*.zip"
 	],
-	"bold_folder_labels": false,
+	"bold_folder_labels": true,
 	"caret_extra_bottom": 0,
 	"caret_extra_top": 0,
 	"caret_extra_width": 0,
@@ -50,6 +50,7 @@
 	"default_line_ending": "unix",
 	"detect_indentation": true,
 	"dictionary": "Packages/Language - English/en_US.dic",
+	"dpi_scale": 1.0,
 	"drag_text": true,
 	"draw_centered": false,
 	"draw_indent_guides": true,
@@ -58,6 +59,36 @@
 	"enable_hexadecimal_encoding": true,
 	"enable_tab_scrolling": true,
 	"ensure_newline_at_eof_on_save": true,
+	"extra_file_exclude_patterns":
+	[
+		"*.pyc",
+		"*.pyo",
+		"*.exe",
+		"*.dll",
+		"*.obj",
+		"*.o",
+		"*.a",
+		"*.lib",
+		"*.so",
+		"*.dylib",
+		"*.ncb",
+		"*.sdf",
+		"*.suo",
+		"*.pdb",
+		"*.idb",
+		".DS_Store",
+		"*.class",
+		"*.psd",
+		"*.db",
+		"*.sublime-workspace"
+	],
+	"extra_folder_exclude_patterns":
+	[
+		".svn",
+		".git",
+		".hg",
+		"CVS"
+	],
 	"fade_fold_buttons": true,
 	"fallback_encoding": "Western (Windows 1252)",
 	"file_exclude_patterns":
@@ -98,7 +129,7 @@
 		"gray_antialias",
 		"subpixel_antialias"
 	],
-	"font_size": 16,
+	"font_size": 23,
 	"gpu_window_buffer": "auto",
 	"gutter": true,
 	"highlight_line": true,

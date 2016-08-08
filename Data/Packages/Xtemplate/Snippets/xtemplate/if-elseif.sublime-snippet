@@ -1,0 +1,16 @@
+<snippet>
+	<content><![CDATA[
+{{#if(${1:x===1})}}
+	${2://code}
+{{elseif(${3:x===2})}}
+	${4://code}
+{{else}}
+	${5://code}
+{{/if}}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>xiff</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.js, text.html, text.xtpl, text.htm</scope> -->
+	<description>if...elseif...</description>
+</snippet>

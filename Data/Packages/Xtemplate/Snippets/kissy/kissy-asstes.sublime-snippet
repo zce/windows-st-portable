@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+<script src="//g.alicdn.com/kissy/k/${1:1.4.7}/seed${2:-min}.js"></script>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>k</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.js, text.html, text.xtpl, text.htm</scope>
+	<description>kissy cdn</description>
+</snippet>

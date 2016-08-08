@@ -1,7 +1,11 @@
-[{
-  "caption": "zce",
-  "children": [{
-    "caption": "Open in Browser",
-    "command": "open_in_browser"
-  }]
-}]
+[
+  {
+    "caption": "zce",
+    "children": [
+      { "caption": "-", "id": "file" },
+      { "caption": "Open in Browser", "command": "open_in_browser" },
+      { "caption": "Open in Command", "command": "open_terminal" },
+      { "caption": "Open in Co11111mmand", "command": "open_terminal" }
+    ]
+  }
+]

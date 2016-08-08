@@ -1,0 +1,23 @@
+[
+	{
+		"id": "side-bar-files-open-with",
+		"children":
+		[
+			//application n
+			{
+				"caption": "Chrome",
+				"id": "side-bar-files-open-with-chrome",
+				"command": "side_bar_files_open_with",
+				"args": {
+					"paths": [],
+					"application": "C:/Users/zce/AppData/Local/Google/Chrome/Application/chrome.exe",
+					"extensions":".*", //any file with extension
+					"args":[]
+				},
+				"open_automatically" : false // will close the view/tab and launch the application
+			},
+
+			{"caption":"-"}
+		]
+	}
+]

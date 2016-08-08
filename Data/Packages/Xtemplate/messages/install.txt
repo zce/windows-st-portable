@@ -1,0 +1,37 @@
+# 感谢你安装 Syntax Highlighting & snippets for xtemplate
+
+==================================
+
+项目地址: https://github.com/noyobo/sublime-xtemplate
+Issuse: https://github.com/noyobo/sublime-xtemplate/issues/new
+
+欢迎提交issuse. 让 Xtemplate 更健壮 :)
+你可以通过 Preferneces > Browse Pageage 打开 Xtemplate 目录. 增加/修改 代码
+
+=================================
+
+## Feature
+
+### KISSY 主题色 Color Scheme
+
+### Xtemplate 语法自动完成
+
+### 常用HTML代码片段
+
+## Usage
+
+你可以这这里查看支持的 snippets 列表 :
+https://github.com/noyobo/sublime-xtemplate/blob/master/SNIPPETS.md
+
+默认支持 .xtpl 文件, 如果你需要对其他类型文件支持
+在 sublime 的右下角选择 Open all with current extension as ...
+选择 Xtemplate
+
+## 自动完成提示:
+
+输入 `x` 展开 snippets list
+
+## Monokai(Xtemplate) Color Scheme
+
+主题色继承 Monokai, 扩展 xtemplate 语法, 使用KISSY Logo 主题色增强语法提示
+通过 Preferneces > Color Scheme > Xtemplate > Monokai(Xtemplate) 修改

@@ -1,0 +1,31 @@
+{
+  "name": "sublime-snippets",
+  "version": "1.2.7",
+  "private": true,
+  "description": "kissy xtemplate snippets",
+  "scripts": {
+    "test": "gulp lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/noyobo/sublime-xtemplate.git"
+  },
+  "author": "noyobo<noyobo@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/noyobo/sublime-xtemplate/issues"
+  },
+  "homepage": "https://github.com/noyobo/sublime-xtemplate",
+  "devDependencies": {
+    "gulp": "~3.9.0",
+    "gulp-clean": "~0.3.1",
+    "gulp-copy": "0.0.2",
+    "gulp-filter": "~2.0.2",
+    "gulp-if": "~1.2.5",
+    "gulp-lintspaces": "~0.3.0",
+    "gulp-util": "~3.0.6",
+    "lodash.forin": "~3.0.2",
+    "map-stream": "0.0.6",
+    "markdown-creator": "~0.1.5",
+    "xml-mapping": "~1.7.0"
+  }
+}

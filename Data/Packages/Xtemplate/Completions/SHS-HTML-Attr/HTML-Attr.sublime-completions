@@ -1,0 +1,113 @@
+{
+    "scope": "source.xtpl - source - entity.other, entity.other.attribute-name.html", 
+    "completions": [
+        {
+            "contents": "alt=\"$1\"$0", 
+            "trigger": "alt\tAttr"
+        }, 
+        {
+            "contents": "align=\"$1\"$0", 
+            "trigger": "align\tAttr"
+        }, 
+        {
+            "contents": "class=\"$1\"$0", 
+            "trigger": "class\tAttr"
+        }, 
+        {
+            "contents": "controls=\"${1:controls}\"$0", 
+            "trigger": "controls\tAttr"
+        }, 
+        {
+            "contents": "dir=\"$1\"$0", 
+            "trigger": "dir\tAttr"
+        }, 
+        {
+            "contents": "data-${1:name}=\"$2\"$0", 
+            "trigger": "data\tAttr"
+        }, 
+        {
+            "contents": "herf=\"$1\"$0", 
+            "trigger": "href\tAttr"
+        }, 
+        {
+            "contents": "id=\"$1\"$0", 
+            "trigger": "id\tAttr"
+        }, 
+        {
+            "contents": "lang=\"$1\"$0", 
+            "trigger": "lang\tAttr"
+        }, 
+        {
+            "contents": "lable=\"$1\"$0", 
+            "trigger": "lable\tAttr"
+        }, 
+        {
+            "contents": "name=\"$1\"$0", 
+            "trigger": "name\tAttr"
+        }, 
+        {
+            "contents": "onclick=\"$1\"$0", 
+            "trigger": "onclick\tAttr"
+        }, 
+        {
+            "contents": "ondbclick=\"$1\"$0", 
+            "trigger": "ondbclick\tAttr"
+        }, 
+        {
+            "contents": "onkeydown=\"$1\"$0", 
+            "trigger": "onkeydown\tAttr"
+        }, 
+        {
+            "contents": "onkeypress=\"$1\"$0", 
+            "trigger": "onkeypress\tAttr"
+        }, 
+        {
+            "contents": "onkeyup=\"$1\"$0", 
+            "trigger": "onkeyup\tAttr"
+        }, 
+        {
+            "contents": "onkeypress=\"$1\"$0", 
+            "trigger": "onkeypress\tAttr"
+        }, 
+        {
+            "contents": "onmousedown=\"$1\"$0", 
+            "trigger": "onmousedown\tAttr"
+        }, 
+        {
+            "contents": "onmousemove=\"$1\"$0", 
+            "trigger": "onmousemove\tAttr"
+        }, 
+        {
+            "contents": "onmouseout=\"$1\"$0", 
+            "trigger": "onmouseout\tAttr"
+        }, 
+        {
+            "contents": "onmouseover=\"$1\"$0", 
+            "trigger": "onmouseover\tAttr"
+        }, 
+        {
+            "contents": "onmouseup=\"$1\"$0", 
+            "trigger": "onmouseup\tAttr"
+        }, 
+        {
+            "contents": "style=\"$1\"$0", 
+            "trigger": "style\tAttr"
+        }, 
+        {
+            "contents": "data-spm=\"$1\"$0", 
+            "trigger": "spm\tAttr"
+        }, 
+        {
+            "contents": "title=\"$1\"$0", 
+            "trigger": "title\tAttr"
+        }, 
+        {
+            "contents": "target=\"$1\"$0", 
+            "trigger": "target\tAttr"
+        }, 
+        {
+            "contents": "value=\"$1\"$0", 
+            "trigger": "value\tAttr"
+        }
+    ]
+}

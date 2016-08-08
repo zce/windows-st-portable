@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[<progress>
+	${1}
+</progress>$0
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>progress</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.xtpl, source.js</scope>
+	<description><![CDATA[<progress/>]]></description>
+</snippet>

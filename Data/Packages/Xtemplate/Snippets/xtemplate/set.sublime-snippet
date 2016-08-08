@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+{{set(${1:x}=${2:1})}}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>xs</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.js, text.html, text.xtpl, text.htm</scope> -->
+	<description>set</description>
+</snippet>

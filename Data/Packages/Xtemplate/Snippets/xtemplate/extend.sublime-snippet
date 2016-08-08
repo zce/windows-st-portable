@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+{{extend ('${1:layout}')}}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>xe</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.js, text.html, text.xtpl, text.htm</scope> -->
+	<description>extend ...</description>
+</snippet>

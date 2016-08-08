@@ -65,7 +65,7 @@
       <key>settings</key>
       <dict>
         <key>foreground</key>
-        <string>#B0BEC5</string>
+        <string>#B0BEC5AA</string>
         <key>fontStyle</key>
         <string>italic</string>
       </dict>
@@ -450,7 +450,7 @@ keyword.operator, constant.other.color, meta.tag, punctuation.definition.tag, pu
       <key>settings</key>
       <dict>
         <key>background</key>
-        <string>#042a47ff</string>
+        <string>#fff5c9ff</string>
         <key>foreground</key>
         <string>#99b89dff</string>
       </dict>

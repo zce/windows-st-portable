@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+{{{tms ('${1:header.html}')}}}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>xtms</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.js, text.html, text.xtpl, text.htm</scope> -->
+	<description>{{{tms}}}</description>
+</snippet>

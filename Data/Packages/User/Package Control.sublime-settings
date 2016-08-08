@@ -15,7 +15,14 @@
 		"Emmet",
 		"Git",
 		"GitGutter",
+		"Handlebars",
 		"IMESupport",
-		"JavaScript Snippets"
+		"JavaScript Snippets",
+		"LESS",
+		"Package Control",
+		"SideBarEnhancements",
+		"Terminal",
+		"Vue Syntax Highlight",
+		"Xtemplate"
 	]
 }
