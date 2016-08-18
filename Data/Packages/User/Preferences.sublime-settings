@@ -43,7 +43,7 @@
 	"caret_extra_width": 0,
 	"caret_style": "smooth",
 	"close_windows_when_empty": false,
-	"color_scheme": "Packages/iceStone/Themes/Light.tmTheme",
+	"color_scheme": "Packages/zce/themes/Light.tmTheme",
 	"copy_with_empty_selection": true,
 	"create_window_at_startup": true,
 	"default_encoding": "UTF-8",
@@ -121,7 +121,8 @@
 		".svn",
 		".git",
 		".hg",
-		"CVS"
+		"CVS",
+		"node_modules"
 	],
 	"font_face": "Consolas",
 	"font_options":
@@ -129,7 +130,7 @@
 		"gray_antialias",
 		"subpixel_antialias"
 	],
-	"font_size": 23,
+	"font_size": 18,
 	"gpu_window_buffer": "auto",
 	"gutter": true,
 	"highlight_line": true,
@@ -137,6 +138,7 @@
 	"hot_exit": true,
 	"ignored_packages":
 	[
+		"Git",
 		"JavaScript",
 		"Vintage"
 	],
