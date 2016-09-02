@@ -1,9 +1,0 @@
-
-Materialize - Appbar Addon
-https://github.com/saadq/Materialize-appbar
-
-
-👉 Version 1.0.0 👈
-********************************************************************************
-
-  ➼ Add default teal App Bar style
