@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+for (${1:const} ${2:item} of ${3:arr}) {
+  ${4:// TODO:}
+}
+]]></content>
+  <tabTrigger>forof</tabTrigger>
+  <scope>source.js</scope>
+  <description>The for of loop</description>
+</snippet>

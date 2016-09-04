@@ -1,0 +1,7 @@
+<snippet>
+  <content><![CDATA[
+/* beautify ignore:${1:start} */
+]]></content>
+  <tabTrigger>bi</tabTrigger>
+  <description>beautify ignore</description>
+</snippet>

@@ -1,5 +1,29 @@
 # changelog
 
+## 1.14.0
+
+ - Fixed iTerm2-v3 script navigation and window activation via @garyking in #133
+
+## 1.13.1
+
+ - Added `release.sh` for release automation
+
+## 1.13.0
+
+ - Added iTerm2-v3 support via @pzgz in #98
+
+## 1.12.1
+
+ - Added missing changelog notes
+
+## 1.12.0
+
+ - Fixed gnome-terminal support via @beledouxdenis in #115
+
+## 1.11.0
+
+ - Fixed custom parameters functionality via @jfcherng in #112
+
 ## 1.10.1
 
  - Replaced `readme.creole` with `readme.md` based off of website

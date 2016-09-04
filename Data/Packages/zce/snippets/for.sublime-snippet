@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+for (${1:let} ${2:i} = ${4:0}; ${2:i} < ${3:num}; ${2:i}++) {
+  $5
+}
+]]></content>
+  <tabTrigger>for</tabTrigger>
+  <scope>source.js</scope>
+  <description>For loop</description>
+</snippet>

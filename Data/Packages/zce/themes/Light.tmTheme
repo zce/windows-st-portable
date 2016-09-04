@@ -450,9 +450,9 @@ keyword.operator, constant.other.color, meta.tag, punctuation.definition.tag, pu
       <key>settings</key>
       <dict>
         <key>background</key>
-        <string>#f9eed0</string>
+        <string>#042a47ff</string>
         <key>foreground</key>
-        <string>#f9eed0</string>
+        <string>#99b89dff</string>
       </dict>
     </dict>
     <dict>

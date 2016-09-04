@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[
+const { Router } = require('express')
+const router = module.exports = Router()
+// pathname starts with
+router.prefix = '/${1:${TM_FILENAME/(.+)\..+|.*/$1/:demo}}'
+
+/**
+ * GET /
+ */
+router.get('/', (req, res) => {
+  res.render('${2:index}')
+})
+]]></content>
+  <tabTrigger>controller</tabTrigger>
+  <scope>source.js</scope>
+  <description>Express Controller</description>
+</snippet>

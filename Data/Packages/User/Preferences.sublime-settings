@@ -124,7 +124,7 @@
 		"CVS",
 		"node_modules"
 	],
-	"font_face": "Consolas",
+	"font_face": "Source Code Pro",
 	"font_options":
 	[
 		"gray_antialias",

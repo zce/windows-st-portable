@@ -1,0 +1,11 @@
+<snippet>
+  <content><![CDATA[
+for (${1:const} ${2:key} in ${3:dict}) {
+  const item = ${3:dict}[${2:key}]
+  ${4:// TODO:}
+}
+]]></content>
+  <tabTrigger>forin</tabTrigger>
+  <scope>source.js</scope>
+  <description>The for in loop</description>
+</snippet>
