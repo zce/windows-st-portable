@@ -1,0 +1,9 @@
+
+Materialize - Appbar Addon
+https://github.com/saadq/Materialize-appbar
+
+
+👉 Version 1.0.3 👈
+********************************************************************************
+
+  ➼ Fix tab height for "material_theme_small_tab" mode.

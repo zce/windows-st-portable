@@ -1,0 +1,9 @@
+
+Materialize - Appbar Addon
+https://github.com/saadq/Materialize-appbar
+
+
+👉 Version 1.0.2 👈
+********************************************************************************
+
+  ➼ Update README with configuration options

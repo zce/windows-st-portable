@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[
-{{#macro('${1:name}',${2:param})}}
+{{#macro('${1:name}','${2:param}')}}
 	{{${2:param}}}
 {{/macro}}
 ]]></content>

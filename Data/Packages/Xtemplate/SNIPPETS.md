@@ -102,8 +102,8 @@
 |xiff   |`if...elseif...`      |```{{#if(x===1)}}//code{{elseif(x===2)}}//code{{else}}//code{{/if}}```|
 |xifw   |`if...with...`        |```{{#if(obj)}}{{#with(obj)}}//code{{/with}}{{/if}}```                |
 |xlif   |`elseif...`           |```{{elseif(x===1)}}//code```                                         |
-|xm     |`macro`               |```{{#macro('name',param)}}{{param}}{{/macro}}```                     |
-|xmc    |`macro call`          |```{{#macro('name','variable')}}```                                   |
+|xm     |`macro`               |```{{#macro('name','param')}}{{param}}{{/macro}}```                     |
+|xmc    |`macro call`          |```{{macro('name','variable')}}```                                   |
 |xrange |`range...`            |```range(0,3)```                                                      |
 |xroot  |`root`                |```{{root.name}}```                                                   |
 |xs     |`set`                 |```{{set(x=1)}}```                                                    |
