@@ -9,17 +9,17 @@
     "settings": ["material_theme_small_tab", "enable_tab_scrolling"],
     "layer0.tint": [0, 150, 136],
     "layer0.inner_margin": [0, 32, 0, 0],
-    "layer1.texture": "Material Theme - Appbar/assets/teal/sidebar_heading--small.png",
-    "layer1.opacity": 1.0,
-    "layer1.inner_margin": [130, 36, 14, 0],
+    "layer2.texture": "Material Theme - Appbar/assets/teal/sidebar_heading--small.png",
+    "layer2.opacity": 1.0,
+    "layer2.inner_margin": [130, 36, 14, 0],
     "content_margin": [0, 36, 0, 0]
   },
 
   {
     "class": "sidebar_container",
     "settings": ["material_theme_small_tab", "!enable_tab_scrolling"],
-    "layer1.texture": "Material Theme - Appbar/assets/teal/sidebar_heading--small.png",
-    "layer1.inner_margin": [130, 36, 14, 0],
+    "layer2.texture": "Material Theme - Appbar/assets/teal/sidebar_heading--small.png",
+    "layer2.inner_margin": [130, 36, 14, 0],
     "content_margin": [0, 36, 0, 0]
   },
 
@@ -71,13 +71,13 @@
     "class": "sidebar_container",
     "settings": ["material_theme_appbar_lime"],
     "layer0.tint": [104, 159, 56],
-    "layer1.texture": "Material Theme - Appbar/assets/lime/sidebar_heading.png",
+    "layer2.texture": "Material Theme - Appbar/assets/lime/sidebar_heading.png",
   },
 
   {
     "class": "sidebar_container",
     "settings": ["material_theme_small_tab", "material_theme_appbar_lime"],
-    "layer1.texture": "Material Theme - Appbar/assets/lime/sidebar_heading--small.png",
+    "layer2.texture": "Material Theme - Appbar/assets/lime/sidebar_heading--small.png",
   },
 
 
@@ -121,13 +121,13 @@
     "class": "sidebar_container",
     "settings": ["material_theme_appbar_orange"],
     "layer0.tint": [255, 87, 34],
-    "layer1.texture": "Material Theme - Appbar/assets/orange/sidebar_heading.png"
+    "layer2.texture": "Material Theme - Appbar/assets/orange/sidebar_heading.png"
   },
 
   {
     "class": "sidebar_container",
     "settings": ["material_theme_small_tab", "material_theme_appbar_orange"],
-    "layer1.texture": "Material Theme - Appbar/assets/orange/sidebar_heading--small.png",
+    "layer2.texture": "Material Theme - Appbar/assets/orange/sidebar_heading--small.png",
   },
 
   // PURPLE ACCENT
@@ -170,13 +170,13 @@
     "class": "sidebar_container",
     "settings": ["material_theme_appbar_purple"],
     "layer0.tint": [171, 71, 188],
-    "layer1.texture": "Material Theme - Appbar/assets/purple/sidebar_heading.png"
+    "layer2.texture": "Material Theme - Appbar/assets/purple/sidebar_heading.png"
   },
 
   {
     "class": "sidebar_container",
     "settings": ["material_theme_small_tab", "material_theme_appbar_purple"],
-    "layer1.texture": "Material Theme - Appbar/assets/purple/sidebar_heading--small.png",
+    "layer2.texture": "Material Theme - Appbar/assets/purple/sidebar_heading--small.png",
   },
 
   // RED ACCENT
@@ -219,13 +219,13 @@
     "class": "sidebar_container",
     "settings": ["material_theme_appbar_red"],
     "layer0.tint": [229, 57, 53],
-    "layer1.texture": "Material Theme - Appbar/assets/red/sidebar_heading.png"
+    "layer2.texture": "Material Theme - Appbar/assets/red/sidebar_heading.png"
   },
 
   {
     "class": "sidebar_container",
     "settings": ["material_theme_small_tab", "material_theme_appbar_red"],
-    "layer1.texture": "Material Theme - Appbar/assets/red/sidebar_heading--small.png",
+    "layer2.texture": "Material Theme - Appbar/assets/red/sidebar_heading--small.png",
   },
 
   // YELLOW ACCENT
@@ -268,13 +268,13 @@
     "class": "sidebar_container",
     "settings": ["material_theme_appbar_yellow"],
     "layer0.tint": [255, 145, 24],
-    "layer1.texture": "Material Theme - Appbar/assets/yellow/sidebar_heading.png"
+    "layer2.texture": "Material Theme - Appbar/assets/yellow/sidebar_heading.png"
   },
 
   {
     "class": "sidebar_container",
     "settings": ["material_theme_small_tab", "material_theme_appbar_yellow"],
-    "layer1.texture": "Material Theme - Appbar/assets/yellow/sidebar_heading--small.png",
+    "layer2.texture": "Material Theme - Appbar/assets/yellow/sidebar_heading--small.png",
   },
 
   // INDIGO ACCENT
@@ -317,13 +317,13 @@
     "class": "sidebar_container",
     "settings": ["material_theme_appbar_indigo"],
     "layer0.tint": [57, 73, 171],
-    "layer1.texture": "Material Theme - Appbar/assets/indigo/sidebar_heading.png"
+    "layer2.texture": "Material Theme - Appbar/assets/indigo/sidebar_heading.png"
   },
 
   {
     "class": "sidebar_container",
     "settings": ["material_theme_small_tab", "material_theme_appbar_indigo"],
-    "layer1.texture": "Material Theme - Appbar/assets/indigo/sidebar_heading--small.png",
+    "layer2.texture": "Material Theme - Appbar/assets/indigo/sidebar_heading--small.png",
   },
 
 
@@ -367,13 +367,13 @@
     "class": "sidebar_container",
     "settings": ["material_theme_appbar_pink"],
     "layer0.tint": [226, 16, 90],
-    "layer1.texture": "Material Theme - Appbar/assets/pink/sidebar_heading.png"
+    "layer2.texture": "Material Theme - Appbar/assets/pink/sidebar_heading.png"
   },
 
   {
     "class": "sidebar_container",
     "settings": ["material_theme_small_tab", "material_theme_appbar_pink"],
-    "layer1.texture": "Material Theme - Appbar/assets/pink/sidebar_heading--small.png",
+    "layer2.texture": "Material Theme - Appbar/assets/pink/sidebar_heading--small.png",
   },
 
 
@@ -417,13 +417,13 @@
     "class": "sidebar_container",
     "settings": ["material_theme_appbar_blue"],
     "layer0.tint": [43, 114, 233],
-    "layer1.texture": "Material Theme - Appbar/assets/blue/sidebar_heading.png"
+    "layer2.texture": "Material Theme - Appbar/assets/blue/sidebar_heading.png"
   },
 
   {
     "class": "sidebar_container",
     "settings": ["material_theme_small_tab", "material_theme_appbar_blue"],
-    "layer1.texture": "Material Theme - Appbar/assets/blue/sidebar_heading--small.png",
+    "layer2.texture": "Material Theme - Appbar/assets/blue/sidebar_heading--small.png",
   },
 
 
@@ -467,13 +467,13 @@
     "class": "sidebar_container",
     "settings": ["material_theme_appbar_cyan"],
     "layer0.tint": [18, 175, 196],
-    "layer1.texture": "Material Theme - Appbar/assets/cyan/sidebar_heading.png"
+    "layer2.texture": "Material Theme - Appbar/assets/cyan/sidebar_heading.png"
   },
 
   {
     "class": "sidebar_container",
     "settings": ["material_theme_small_tab", "material_theme_appbar_cyan"],
-    "layer1.texture": "Material Theme - Appbar/assets/cyan/sidebar_heading--small.png",
+    "layer2.texture": "Material Theme - Appbar/assets/cyan/sidebar_heading--small.png",
   },
 
   // CHARCOAL ACCENT
@@ -516,12 +516,12 @@
     "class": "sidebar_container",
     "settings": ["material_theme_appbar_charcoal"],
     "layer0.tint": [56, 56, 56],
-    "layer1.texture": "Material Theme - Appbar/assets/charcoal/sidebar_heading.png"
+    "layer2.texture": "Material Theme - Appbar/assets/charcoal/sidebar_heading.png"
   },
 
   {
     "class": "sidebar_container",
     "settings": ["material_theme_small_tab", "material_theme_appbar_charcoal"],
-    "layer1.texture": "Material Theme - Appbar/assets/charcoal/sidebar_heading--small.png",
+    "layer2.texture": "Material Theme - Appbar/assets/charcoal/sidebar_heading--small.png",
   },
 

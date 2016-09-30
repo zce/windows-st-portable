@@ -1,6 +1,6 @@
 {
   "name": "material-theme-appbar",
-  "version": "1.2.3",
+  "version": "1.2.6",
   "description": "Material Theme Appbar addon for Sublime Text 3",
   "main": "index.js",
   "dependencies": {},
