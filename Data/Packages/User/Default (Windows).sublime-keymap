@@ -1,28 +1,32 @@
-[
-  { "keys": ["alt+\\"], "command": "toggle_side_bar" },
-  { "keys": ["alt+w"], "command": "close" },
-  { "keys": ["alt+s"], "command": "save" },
-  { "keys": ["alt+x"], "command": "cut" },
-  { "keys": ["alt+c"], "command": "copy" },
-  { "keys": ["alt+v"], "command": "paste" },
-  { "keys": ["alt+z"], "command": "undo" },
-  { "keys": ["alt+y"], "command": "redo_or_repeat" },
-  { "keys": ["alt+/"], "command": "toggle_comment", "args": { "block": false } },
-  { "keys": ["alt+shift+/"], "command": "toggle_comment", "args": { "block": true } },
-  { "keys": ["alt+]"], "command": "indent" },
-  { "keys": ["alt+["], "command": "unindent" },
-  { "keys": ["alt+l"], "command": "expand_selection", "args": {"to": "line"} },
-  { "keys": ["alt+d"], "command": "find_under_expand" },
-  { "keys": ["alt+k", "alt+d"], "command": "find_under_expand_skip" },
-  { "keys": ["alt+f"], "command": "show_panel", "args": {"panel": "find", "reverse": false} },
-  { "keys": ["alt+shift+f"], "command": "show_panel", "args": {"panel": "find_in_files"} },
-  { "keys": ["alt+h"], "command": "show_panel", "args": {"panel": "replace", "reverse": false} },
-  { "keys": ["alt+space"], "command": "auto_complete" },
-  { "keys": ["alt+space"], "command": "replace_completion_with_auto_complete", "context":
-    [
-      { "key": "last_command", "operator": "equal", "operand": "insert_best_completion" },
-      { "key": "auto_complete_visible", "operator": "equal", "operand": false },
-      { "key": "setting.tab_completion", "operator": "equal", "operand": true }
-    ]
-  },
-]
+// [
+//   { "keys": ["alt+\\"], "command": "toggle_side_bar" },
+//   { "keys": ["alt+w"], "command": "close" },
+//   { "keys": ["alt+s"], "command": "save" },
+//   { "keys": ["alt+x"], "command": "cut" },
+//   { "keys": ["alt+a"], "command": "select_all" },
+//   { "keys": ["alt+c"], "command": "copy" },
+//   { "keys": ["alt+v"], "command": "paste" },
+//   { "keys": ["alt+z"], "command": "undo" },
+//   { "keys": ["alt+y"], "command": "redo_or_repeat" },
+//   { "keys": ["alt+/"], "command": "toggle_comment", "args": { "block": false } },
+//   { "keys": ["alt+shift+/"], "command": "toggle_comment", "args": { "block": true } },
+//   { "keys": ["alt+]"], "command": "indent" },
+//   { "keys": ["alt+["], "command": "unindent" },
+//   { "keys": ["alt+l"], "command": "expand_selection", "args": {"to": "line"} },
+//   { "keys": ["alt+d"], "command": "find_under_expand" },
+//   { "keys": ["alt+k", "alt+d"], "command": "find_under_expand_skip" },
+//   { "keys": ["alt+f"], "command": "show_panel", "args": {"panel": "find", "reverse": false} },
+//   { "keys": ["alt+shift+f"], "command": "show_panel", "args": {"panel": "find_in_files"} },
+//   { "keys": ["alt+h"], "command": "show_panel", "args": {"panel": "replace", "reverse": false} },
+//   { "keys": ["alt+space"], "command": "auto_complete" },
+//   { "keys": ["alt+space"], "command": "replace_completion_with_auto_complete", "context":
+//     [
+//       { "key": "last_command", "operator": "equal", "operand": "insert_best_completion" },
+//       { "key": "auto_complete_visible", "operator": "equal", "operand": false },
+//       { "key": "setting.tab_completion", "operator": "equal", "operand": true }
+//     ]
+//   },
+//   { "keys": ["alt+enter"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line.sublime-macro"} },
+//   { "keys": ["alt+shift+enter"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Add Line Before.sublime-macro"} },
+//   { "keys": ["alt+e"], "args": { "action": "expand_abbreviation" }, "command": "run_emmet_action", "context": [{ "key": "emmet_action_enabled.expand_abbreviation" }] }
+// ]

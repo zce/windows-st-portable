@@ -1,0 +1,9 @@
+<snippet>
+  <content><![CDATA[
+![${2:Alt}]('${1:./img.png}')
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>img</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.md</scope>
+</snippet>

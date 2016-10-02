@@ -1,0 +1,14 @@
+<snippet>
+  <content><![CDATA[
+/**
+ * ${2/(\w)/\u$1/g} /${4:${1:index}}
+ */
+router.${2:get}('/${1:index}', ctx => {
+  // TODO:
+  ${3:ctx.body = '${4:${1:index}}'}
+})
+]]></content>
+  <tabTrigger>ka</tabTrigger>
+  <scope>source.js</scope>
+  <description>Koa Action Method</description>
+</snippet>

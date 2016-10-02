@@ -1,8 +1,0 @@
-{
-	"extensions":
-	[
-		"css.erb",
-		"css.liquid",
-		"wxss"
-	]
-}

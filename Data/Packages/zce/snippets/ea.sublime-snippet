@@ -7,7 +7,7 @@ router.${2:get}('/${1:index}', (req, res) => {
   res.render('${3:${1:index}}')
 })
 ]]></content>
-  <tabTrigger>action</tabTrigger>
+  <tabTrigger>ea</tabTrigger>
   <scope>source.js</scope>
   <description>Express Action Method</description>
 </snippet>

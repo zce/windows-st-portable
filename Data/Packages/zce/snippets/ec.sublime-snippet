@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
   res.render('${2:index}')
 })
 ]]></content>
-  <tabTrigger>controller</tabTrigger>
+  <tabTrigger>ec</tabTrigger>
   <scope>source.js</scope>
   <description>Express Controller</description>
 </snippet>

@@ -124,13 +124,13 @@
 		"CVS",
 		"node_modules"
 	],
-	"font_face": "Consolas",
+	"font_face": "Source Code Pro",
 	"font_options":
 	[
 		"gray_antialias",
 		"subpixel_antialias"
 	],
-	"font_size": 19,
+	"font_size": 21,
 	"gpu_window_buffer": "auto",
 	"gutter": true,
 	"highlight_line": true,
@@ -140,6 +140,9 @@
 	[
 		"Git",
 		"JavaScript",
+		"Materialize",
+		"Materialize-Appbar",
+		"Materialize-White-Panels",
 		"Vintage"
 	],
 	"indent_guide_options":
