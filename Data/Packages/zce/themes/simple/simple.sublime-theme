@@ -1,6 +1,6 @@
 [
   //
-  // TABS (REGULAR)
+  // TABS
   //
 
   // Tab set
@@ -31,7 +31,7 @@
     "content_margin": [12, 3, 12, 3],
     "max_margin_trim": 0,
     "hit_test_level": 0.0,
-    "layer0.tint": [232, 232, 232], // 标签项背景
+    "layer0.tint": [235, 235, 235], // 标签项背景
     "layer0.opacity": 1.0
   },
   // Tab close state
@@ -434,15 +434,13 @@
   {
     "class": "label_control",
     "parents": [{"class": "panel_control"}],
-    "shadow_color": [250, 250, 250],
-    "shadow_offset": [0, 1]
+    "shadow_offset": 0
   },
   // Button labels
   {
     "class": "label_control",
     "parents": [{"class": "button_control"}],
-    "shadow_color": [245, 245, 245],
-    "shadow_offset": [0, 1]
+    "shadow_offset": 0
   },
 
   //
@@ -948,7 +946,7 @@
   {
     "class": "icon_button_control",
     "attributes": ["selected"],
-    "layer0.tint": [120, 120, 120],
+    "layer0.tint": [160, 160, 160],
   },
   // Button group left
   {
@@ -959,7 +957,7 @@
   {
     "class": "icon_button_control",
     "attributes": ["left", "selected"],
-    "layer0.tint": [120, 120, 120],
+    "layer0.tint": [160, 160, 160],
   },
   // Button group right
   {
@@ -970,7 +968,7 @@
   {
     "class": "icon_button_control",
     "attributes": ["right", "selected"],
-    "layer0.tint": [120, 120, 120],
+    "layer0.tint": [160, 160, 160],
   },
   // Button single
   {
@@ -981,7 +979,7 @@
   {
     "class": "icon_button_control",
     "attributes": ["left", "right", "selected"],
-    "layer0.tint": [120, 120, 120],
+    "layer0.tint": [160, 160, 160],
   },
   // Panel close button
   {
