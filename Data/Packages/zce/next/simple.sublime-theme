@@ -7,8 +7,6 @@
   {
     "class": "tabset_control",
     "layer0.tint": [225, 225, 225], // 标签栏背景
-    // "layer0.texture": "zce/next/images/tabset-background.png",
-    // "layer0.inner_margin": [1, 7],
     "layer0.opacity": 1.0,
     "content_margin": [-4, 0, -4, 3],
     "tab_overlap": -1,
@@ -34,8 +32,6 @@
     "max_margin_trim": 0,
     "hit_test_level": 0.0,
     "layer0.tint": [232, 232, 232], // 标签项背景
-    // "layer0.texture": "zce/next/images/tab-inactive.png",
-    // "layer0.inner_margin": [5, 5],
     "layer0.opacity": 1.0
   },
   // Tab close state
@@ -49,14 +45,12 @@
     "class": "tab_control",
     "attributes": ["hover"],
     "layer0.tint": [240, 240, 240], // 标签项hover背景
-    // "layer0.texture": "zce/next/images/tab-hover.png"
   },
   // Tab active state
   {
     "class": "tab_control",
     "attributes": ["selected"],
     "layer0.tint": [253, 246, 227], // 标签项选中背景
-    // "layer0.texture": "zce/next/images/tab-active.png"
   },
   // Tab dirty state (close button hidden)
   {
@@ -161,15 +155,13 @@
     "class": "tab_label",
     "parents": [{"class": "tab_control", "attributes": ["hover"]}],
     "fg": [25, 25, 25],
-    // "shadow_color": [245, 245, 245]
   },
   {
     "class": "tab_label",
     "parents": [{"class": "tab_control", "attributes": ["selected"]}],
     "fg": [0, 0, 0],
-    "font.bold": 12, // ???
+    // "font.bold": true, // ???
     "font.size": 12, // ???
-    // "shadow_color": [255, 255, 255]
   },
   {
     "class": "tab_label",
@@ -479,8 +471,6 @@
   {
     "class": "status_bar",
     "layer0.tint": [210, 210, 210],
-    // "layer0.texture": "zce/next/images/status-bar-background.png",
-    // "layer0.inner_margin": [2, 2],
     "layer0.opacity": 1.0,
     "content_margin": [8, 4, 8, 4]
   },
@@ -495,7 +485,6 @@
     // "layer0.tint": [38, 50, 56],
     // "layer0.opacity": 1.0,
     // "layer0.draw_center": false,
-    // "layer0.inner_margin": 0,
     // "content_margin": [10, 2, 10, 3],
     "min_size": [80, 0]
   },
@@ -504,7 +493,6 @@
     "class": "label_control",
     "parents": [{"class": "status_bar"}],
     "color": [80, 80, 80],
-    // "shadow_color": [220, 220, 220],
     "shadow_offset": 0
   },
   // panel switcher
@@ -529,8 +517,6 @@
   {
     "class": "sidebar_container",
     "layer0.tint": [214, 221, 229],
-    // "layer0.texture": "zce/next/images/sidebar-bg.png",
-    // "layer0.inner_margin": [1, 1, 2, 1],
     "layer0.opacity": 1.0,
     "content_margin": [0, 0, 0, 0]
   },
@@ -545,8 +531,6 @@
   // Sidebar rows
   {
     "class": "tree_row",
-    // "layer0.texture": "zce/next/images/sidebar-row-selected.png",
-    // "layer0.inner_margin": [1, 1],
     "layer0.opacity": 0.0
   },
   // Sidebar row selected
@@ -561,7 +545,6 @@
     "class": "sidebar_heading",
     "color": [110, 126, 141],
     "font.bold": true,
-    // "shadow_color": [249, 250, 252],
     "shadow_offset": 0
   },
   // Sidebar heading selected
@@ -569,14 +552,12 @@
     "class": "sidebar_heading",
     "parents": [{"class": "tree_row", "attributes": ["selected"]}],
     "color": [255, 255, 255],
-    // "shadow_color": [34, 94, 145],
     "shadow_offset": 0
   },
   // Sidebar entry
   {
     "class": "sidebar_label",
     "color": [70, 86, 102],
-    // "shadow_color": [241, 244, 247],
     "shadow_offset": 0,
     "font.size": 12,
     "font.bold": false,
@@ -612,7 +593,6 @@
     "class": "sidebar_label",
     "parents": [{"class": "tree_row", "attributes": ["selected"]}],
     "color": [255, 255, 255],
-    // "shadow_color": [34, 94, 145],
     "shadow_offset": 0
   },
   // Sidebar entry transient
@@ -793,8 +773,6 @@
     "content_margin": [6, 5, 6, 6],
     "min_size": [70, 30],
     "layer0.tint": [200, 200, 200],
-    // "layer0.texture": "zce/next/images/btn-large.png",
-    // "layer0.inner_margin": [6, 6],
     "layer0.opacity": 1.0
   },
   // Hovered button state
@@ -802,14 +780,12 @@
     "class": "button_control",
     "attributes": ["hover"],
     "layer0.tint": [210, 210, 210],
-    // "layer0.texture": "zce/next/images/btn-large-on.png"
   },
   // Pressed button state
   {
     "class": "button_control",
     "attributes": ["pressed"],
     "layer0.tint": [200, 200, 200],
-    // "layer0.texture": "zce/next/images/btn-large-on.png"
   },
 
   //
@@ -820,8 +796,6 @@
   {
     "class": "text_line_control",
     "layer0.tint": [245, 245, 245],
-    // "layer0.texture": "zce/next/images/text-field.png",
-    // "layer0.inner_margin": [4, 5, 4, 3],
     "layer0.opacity": 1.0,
     "content_margin": [3, 3, 6, 3]
   },
@@ -848,8 +822,6 @@
   {
     "class": "panel_control",
     "layer0.tint": [225, 225, 225],
-    // "layer0.texture": "zce/next/images/panel-background.png",
-    // "layer0.inner_margin": [2, 2, 2, 2],
     "layer0.opacity": 1.0,
     "content_margin": [8, 4, 8, 1]
   },
@@ -858,8 +830,6 @@
     "class": "overlay_control",
     "settings": ["!simple_retina_fix"],
     "layer0.tint": [225, 225, 225],
-    // "layer0.texture": "zce/next/images/quick-panel-background.png",
-    // "layer0.inner_margin": [12, 6, 12, 15],
     "layer0.opacity": 1.0,
     // "layer1.texture": "zce/next/images/quick-panel-sections.png",
     // "layer1.inner_margin": [12, 40, 12, 19],
@@ -888,15 +858,12 @@
   {
     "class": "quick_panel_row",
     "layer0.tint": [245, 245, 245],
-    // "layer0.texture": "zce/next/images/quick-panel-row.png",
-    // "layer0.inner_margin": [2, 2, 2, 2],
     "layer0.opacity": 1.0
   },
   {
     "class": "quick_panel_row",
     "attributes": ["selected"],
     "layer0.tint": [235, 235, 235],
-    // "layer0.texture": "zce/next/images/quick-panel-row-selected.png"
     "layer0.opacity": 1.0
   },
   {
@@ -926,15 +893,12 @@
   {
     "class": "mini_quick_panel_row",
     "layer0.tint": [245, 245, 245],
-    // "layer0.texture": "zce/next/images/quick-panel-row.png",
-    // "layer0.inner_margin": [2, 2, 2, 2],
     "layer0.opacity": 1.0
   },
   {
     "class": "mini_quick_panel_row",
     "attributes": ["selected"],
     "layer0.tint": [235, 235, 235],
-    // "layer0.texture": "zce/next/images/quick-panel-row-selected.png"
     "layer0.opacity": 1.0
   },
 
@@ -961,8 +925,6 @@
   },
   {
     "class": "table_row",
-    // "layer0.texture": "zce/next/images/autocomplete-row-selected.png",
-    // "layer0.inner_margin": [3, 1],
     "layer0.opacity": 0.0
   },
   {
@@ -980,8 +942,6 @@
   {
     "class": "icon_button_control",
     "layer0.tint": [200, 200, 200],
-    // "layer0.texture": "zce/next/images/btn-group-middle.png",
-    // "layer0.inner_margin": [6, 6],
     "layer0.opacity": 1.0,
     "content_margin": [10, 10]
   },
@@ -989,46 +949,39 @@
     "class": "icon_button_control",
     "attributes": ["selected"],
     "layer0.tint": [120, 120, 120],
-    // "layer0.texture": "zce/next/images/btn-group-middle-on.png"
   },
   // Button group left
   {
     "class": "icon_button_control",
     "attributes": ["left"],
-    // "layer0.texture": "zce/next/images/btn-group-left.png",
     // "content_margin": [4, 3, 3, 3]
   },
   {
     "class": "icon_button_control",
     "attributes": ["left", "selected"],
     "layer0.tint": [120, 120, 120],
-    // "layer0.texture": "zce/next/images/btn-group-left-on.png"
   },
   // Button group right
   {
     "class": "icon_button_control",
     "attributes": ["right"],
-    // "layer0.texture": "zce/next/images/btn-group-right.png",
     // "content_margin": [3, 3, 4, 3]
   },
   {
     "class": "icon_button_control",
     "attributes": ["right", "selected"],
     "layer0.tint": [120, 120, 120],
-    // "layer0.texture": "zce/next/images/btn-group-right-on.png"
   },
   // Button single
   {
     "class": "icon_button_control",
     "attributes": ["left", "right"],
-    // "layer0.texture": "zce/next/images/btn-small.png",
     // "content_margin": [4, 3]
   },
   {
     "class": "icon_button_control",
     "attributes": ["left", "right", "selected"],
     "layer0.tint": [120, 120, 120],
-    // "layer0.texture": "zce/next/images/btn-small-on.png"
   },
   // Panel close button
   {
