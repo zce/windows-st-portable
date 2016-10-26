@@ -48,7 +48,7 @@
   {
     "class": "tab_control",
     "attributes": ["hover"],
-    "layer0.tint": [255, 248, 230], // 标签项hover背景
+    "layer0.tint": [240, 240, 240], // 标签项hover背景
     // "layer0.texture": "zce/next/images/tab-hover.png"
   },
   // Tab active state
@@ -154,20 +154,22 @@
     "fade": true,
     "fg": [50, 50, 50],
     "shadow_color": [235, 235, 235],
-    "shadow_offset": [0, 1],
+    "shadow_offset": 0,
     "font.italic": false
   },
   {
     "class": "tab_label",
     "parents": [{"class": "tab_control", "attributes": ["hover"]}],
     "fg": [25, 25, 25],
-    "shadow_color": [245, 245, 245]
+    // "shadow_color": [245, 245, 245]
   },
   {
     "class": "tab_label",
     "parents": [{"class": "tab_control", "attributes": ["selected"]}],
     "fg": [0, 0, 0],
-    "shadow_color": [255, 255, 255]
+    "font.bold": 12, // ???
+    "font.size": 12, // ???
+    // "shadow_color": [255, 255, 255]
   },
   {
     "class": "tab_label",
@@ -476,9 +478,10 @@
   // Status bar container
   {
     "class": "status_bar",
-    "layer0.texture": "zce/next/images/status-bar-background.png",
+    "layer0.tint": [210, 210, 210],
+    // "layer0.texture": "zce/next/images/status-bar-background.png",
+    // "layer0.inner_margin": [2, 2],
     "layer0.opacity": 1.0,
-    "layer0.inner_margin": [2, 2],
     "content_margin": [8, 4, 8, 4]
   },
   // Status bar button
@@ -490,9 +493,9 @@
   {
     "class": "label_control",
     "parents": [{"class": "status_bar"}],
-    "color": [47, 47, 47],
-    "shadow_color": [220, 220, 220],
-    "shadow_offset": [0, 1]
+    "color": [80, 80, 80],
+    // "shadow_color": [220, 220, 220],
+    "shadow_offset": 0
   },
 
   //
@@ -504,8 +507,8 @@
     "class": "sidebar_container",
     "layer0.tint": [214, 221, 229],
     // "layer0.texture": "zce/next/images/sidebar-bg.png",
+    // "layer0.inner_margin": [1, 1, 2, 1],
     "layer0.opacity": 1.0,
-    "layer0.inner_margin": [1, 1, 2, 1],
     "content_margin": [0, 0, 0, 0]
   },
   // Sidebar tree
@@ -520,8 +523,8 @@
   {
     "class": "tree_row",
     // "layer0.texture": "zce/next/images/sidebar-row-selected.png",
-    "layer0.opacity": 0.0,
-    "layer0.inner_margin": [1, 1]
+    // "layer0.inner_margin": [1, 1],
+    "layer0.opacity": 0.0
   },
   // Sidebar row selected
   {
@@ -813,7 +816,7 @@
     "class": "panel_control",
     "layer0.tint": [230, 230, 230],
     // "layer0.texture": "zce/next/images/panel-background.png",
-    "layer0.inner_margin": [2, 2, 2, 2],
+    // "layer0.inner_margin": [2, 2, 2, 2],
     "layer0.opacity": 1.0,
     "content_margin": [2, 3, 2, 1]
   },
