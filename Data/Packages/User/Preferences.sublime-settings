@@ -186,7 +186,6 @@
 	"show_line_endings": false,
 	"show_panel_on_build": true,
 	"show_tab_close_buttons": true,
-	"simple_classic_tabs": false,
 	"simple_file_icon": true,
 	"simple_folder_icon": true,
 	"smart_indent": true,

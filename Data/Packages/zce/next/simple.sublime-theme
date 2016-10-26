@@ -6,20 +6,21 @@
   // Tab set
   {
     "class": "tabset_control",
-    "layer0.texture": "zce/next/images/tabset-background.png",
-    "layer0.inner_margin": [1, 7],
+    "layer0.tint": [225, 225, 225], // 标签栏背景
+    // "layer0.texture": "zce/next/images/tabset-background.png",
+    // "layer0.inner_margin": [1, 7],
     "layer0.opacity": 1.0,
     "content_margin": [-4, 0, -4, 3],
-    "tab_overlap": 5,
+    "tab_overlap": -1,
     "tab_width": 180,
     "tab_min_width": 45,
-    "tab_height": 25,
+    "tab_height": 30,
     "mouse_wheel_switch": false
   },
   {
     "class": "tabset_control",
     "settings": ["enable_tab_scrolling"],
-    "content_margin": [3, 0, 3, 3]
+    "content_margin": [3, 0, 3, 0]
   },
   {
     "class": "tabset_control",
@@ -32,8 +33,9 @@
     "content_margin": [12, 3, 12, 3],
     "max_margin_trim": 0,
     "hit_test_level": 0.0,
-    "layer0.texture": "zce/next/images/tab-inactive.png",
-    "layer0.inner_margin": [5, 5],
+    "layer0.tint": [232, 232, 232], // 标签项背景
+    // "layer0.texture": "zce/next/images/tab-inactive.png",
+    // "layer0.inner_margin": [5, 5],
     "layer0.opacity": 1.0
   },
   // Tab close state
@@ -46,13 +48,15 @@
   {
     "class": "tab_control",
     "attributes": ["hover"],
-    "layer0.texture": "zce/next/images/tab-hover.png"
+    "layer0.tint": [255, 248, 230], // 标签项hover背景
+    // "layer0.texture": "zce/next/images/tab-hover.png"
   },
   // Tab active state
   {
     "class": "tab_control",
     "attributes": ["selected"],
-    "layer0.texture": "zce/next/images/tab-active.png"
+    "layer0.tint": [253, 246, 227], // 标签项选中背景
+    // "layer0.texture": "zce/next/images/tab-active.png"
   },
   // Tab dirty state (close button hidden)
   {
@@ -60,60 +64,6 @@
     "settings": ["!show_tab_close_buttons"],
     "attributes": ["dirty"],
     "content_margin": [12, 3, 7, 3]
-  },
-
-  //
-  // TABS (CLASSIC)
-  //
-
-  // Tab set
-  {
-    "class": "tabset_control",
-    "settings": ["simple_classic_tabs"],
-    "content_margin": [3, 4, 3, 3],
-    "tab_overlap": 24,
-    "tab_height": 28
-  },
-  {
-    "class": "tabset_control",
-    "settings": ["simple_classic_tabs", "enable_tab_scrolling"],
-    "content_margin": [6, 4, 6, 3]
-  },
-  // Tab element
-  {
-    "class": "tab_control",
-    "settings": ["simple_classic_tabs"],
-    "content_margin": [22, 6, 22, 4],
-    "hit_test_level": 0.5,
-    "layer0.texture": "zce/next/images/classic/tab-inactive.png",
-    "layer0.inner_margin": [18, 4]
-  },
-  // Tab close state
-  {
-    "class": "tab_control",
-    "settings": ["simple_classic_tabs", "show_tab_close_buttons"],
-    "content_margin": [22, 6, 15, 4]
-  },
-  // Tab hover state
-  {
-    "class": "tab_control",
-    "settings": ["simple_classic_tabs"],
-    "attributes": ["hover"],
-    "layer0.texture": "zce/next/images/classic/tab-hover.png"
-  },
-  // Tab active state
-  {
-    "class": "tab_control",
-    "settings": ["simple_classic_tabs"],
-    "attributes": ["selected"],
-    "layer0.texture": "zce/next/images/classic/tab-active.png"
-  },
-  // Tab dirty state (close button hidden)
-  {
-    "class": "tab_control",
-    "settings": ["simple_classic_tabs", "!show_tab_close_buttons"],
-    "attributes": ["dirty"],
-    "content_margin": [22, 6, 15, 4]
   },
 
   //
