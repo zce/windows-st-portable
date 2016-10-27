@@ -470,7 +470,7 @@
     "class": "status_bar",
     "layer0.tint": [210, 210, 210],
     "layer0.opacity": 1.0,
-    "content_margin": [8, 4, 8, 4]
+    "content_margin": [5, 2]
   },
   // Status container
   {
@@ -483,7 +483,7 @@
     // "layer0.tint": [38, 50, 56],
     // "layer0.opacity": 1.0,
     // "layer0.draw_center": false,
-    // "content_margin": [10, 2, 10, 3],
+    "content_margin": [10, 0],
     "min_size": [80, 0]
   },
   // Status bar label
@@ -491,6 +491,7 @@
     "class": "label_control",
     "parents": [{"class": "status_bar"}],
     "color": [80, 80, 80],
+    "font.size": 11,
     "shadow_offset": 0
   },
   // panel switcher
