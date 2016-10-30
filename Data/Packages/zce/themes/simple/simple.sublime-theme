@@ -12,13 +12,13 @@
     "tab_overlap": -1,
     "tab_width": 160,
     "tab_min_width": 45,
-    "tab_height": 30,
+    // "tab_height": 30, // ??
     "mouse_wheel_switch": false
   },
   {
     "class": "tabset_control",
     "settings": ["enable_tab_scrolling"],
-    "content_margin": [3, 0, 3, 0]
+    "content_margin": [5, 0]
   },
   {
     "class": "tabset_control",
@@ -28,7 +28,7 @@
   // Tab element
   {
     "class": "tab_control",
-    "content_margin": [12, 3, 12, 3],
+    "content_margin": [12, 3],
     "max_margin_trim": 0,
     "hit_test_level": 0.0,
     "layer0.tint": [235, 235, 235], // 标签项背景
@@ -147,9 +147,7 @@
     "class": "tab_label",
     "fade": true,
     "fg": [50, 50, 50],
-    "shadow_color": [235, 235, 235],
-    "shadow_offset": 0,
-    "font.italic": false
+    "font.bold": false
   },
   {
     "class": "tab_label",
@@ -159,9 +157,9 @@
   {
     "class": "tab_label",
     "parents": [{"class": "tab_control", "attributes": ["selected"]}],
-    "fg": [0, 0, 0],
-    // "font.bold": true, // ???
-    "font.size": 12, // ???
+    "fg": [60, 60, 60],
+    "font.bold": true, // ???
+    // "font.size": 12 // ???
   },
   {
     "class": "tab_label",

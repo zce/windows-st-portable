@@ -5,16 +5,16 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
-    "gulp": "^3.8.11",
-    "gulp-clean": "^0.3.1",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
     "gulp-concat-json": "^1.0.0",
     "gulp-concat-json2js": "^0.1.0",
     "gulp-duration": "0.0.0",
     "gulp-notify": "^2.2.0",
     "gulp-rename": "^1.2.2",
-    "gulp-wrap": "^0.11.0",
-    "path": "^0.11.14",
-    "run-sequence": "^1.1.5"
+    "gulp-wrap": "^0.13.0",
+    "path": "^0.12.7",
+    "run-sequence": "^1.2.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
