@@ -130,7 +130,7 @@
 		"gray_antialias",
 		"subpixel_antialias"
 	],
-	"font_size": 18,
+	"font_size": 19,
 	"gpu_window_buffer": "auto",
 	"gutter": true,
 	"highlight_line": true,
