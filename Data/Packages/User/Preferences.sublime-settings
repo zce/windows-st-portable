@@ -139,6 +139,7 @@
 	"ignored_packages":
 	[
 		"Git",
+		"GitGutter",
 		"JavaScript",
 		"Material Theme",
 		"Material Theme - Appbar",
