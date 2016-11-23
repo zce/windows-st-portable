@@ -64,7 +64,7 @@
 	{
 		"class": "quick_panel_label",
 		"fg": [128, 203, 196, 255],
-		"selected_fg": [255, 255, 255, 255],
+		"selected_fg": [255, 255, 255, 255]
 	},
 
 		// Panel labels
@@ -74,7 +74,7 @@
 		"parents": [{"class": "overlay_control"}],
 		"fg": [84, 110, 122, 255],
 		"selected_fg": [255, 255, 255, 255],
-		"selected_match_fg": [37, 50, 56]
+		"selected_match_fg": [33, 33, 33]
 	},
 
 		// Panels sublabels
@@ -90,7 +90,6 @@
  * Autocomplete popup setting and behavioring
  ========================================================================= */
 
-
 	{
 		"class": "popup_control",
 		"layer0.texture": [255, 255, 255, 255],
@@ -104,12 +103,17 @@
 		"layer0.tint": [255, 255, 255],
 		"layer0.opacity": 1.0
 	},
+	{
+		"cl": "auto_complete",
+		"attributes": ["selected"],
+		"layer0.tint": [0, 255, 255]
+	},
 
 	{
 		"class": "auto_complete_label",
 		"fg": [84, 110, 122, 255],
 		"selected_fg": [255, 255, 255, 255],
-		"selected_match_fg": [37, 50, 56]
+		"selected_match_fg": [33, 33, 33]
 	},
 
 	{
@@ -124,7 +128,8 @@
 		"layer0.opacity": 10
 	},
 
-		// Vertical thumb
+
+	// Vertical thumb
 
 	{
     "class": "puck_control",
@@ -141,5 +146,6 @@
     "layer0.tint": [255, 255, 255],
     "layer1.texture": "Material Theme - White Panels/assets/default/normal_bar_vertical.png"
   }
-
 ]
+
+

@@ -1,1 +1,1 @@
-{"platforms": ["*"], "url": "https://github.com/equinusocio/material-theme", "dependencies": [], "version": "1.0.6", "description": "Enable the Material Theme white panels and inputs", "sublime_text": ">=3000"}
+{"platforms": ["*"], "dependencies": [], "description": "Enable the Material Theme white panels and inputs", "url": "https://github.com/equinusocio/material-theme", "version": "1.0.7", "sublime_text": ">=3000"}
